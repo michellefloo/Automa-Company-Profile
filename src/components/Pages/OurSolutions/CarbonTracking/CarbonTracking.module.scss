@@ -1,0 +1,416 @@
+.carbon-tracking-header-section {
+  background-image: url("../../../../assets/img/CarbonTracking/background-header-carbon-tracking.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  padding: 160px 64px;
+
+  .title {
+    display: flex;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+}
+
+.how-we-do-it-section {
+  background-image: url("../../../../assets/img/CarbonTracking/background-how-we-do-it.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 64px 64px;
+
+  .title {
+    text-align: center;
+    display: flex;
+    font-size: 48px;
+    color: #1c406c;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 80px;
+  }
+
+  .card-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: transform 0.3s ease;
+    }
+
+    .card-image {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      width: 100%;
+    }
+
+    .icon-container {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+
+      .card-icon {
+        height: 40px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .card-title-desc-container {
+      padding: 10px 20px;
+      margin-top: -32px;
+
+      .card-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1c406c;
+        margin-bottom: 16px;
+      }
+
+      .card-description {
+        font-size: 16px;
+        color: #666;
+      }
+    }
+  }
+}
+
+.our-modules-section {
+  background-image: url("../../../../assets/img/CarbonTracking/background-our-modules.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 80px;
+  border-radius: 8px;
+
+  .modules-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    color: #1c406c;
+
+    .no-highlighted {
+      color: #1c406c;
+    }
+
+    .highlighted {
+      color: #007bff;
+      margin: 0 10px;
+    }
+
+    .line {
+      border-radius: 8px;
+      width: 50px;
+      height: 4px;
+      background-color: #8cc6fb;
+      margin: 0 10px;
+    }
+  }
+
+  .modules-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: row;
+    align-content: center;
+    width: 110%;
+    justify-content: center;
+
+    .modules-card-wrapper {
+      position: relative;
+      width: 100%;
+      flex: 0 0 45%;
+    }
+
+    .blue-card {
+      background-color: #59abf6;
+      border-radius: 8px;
+      position: absolute;
+      top: 5px; /* Slight offset for layering effect */
+      right: 5px;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Behind white card */
+    }
+
+    .white-card {
+      background-color: white;
+      border-radius: 8px;
+      position: relative;
+      padding: 40px 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      height: 100%;
+      width: 100%;
+
+      .modules-card-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .modules-card-title {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+          color: #1c406c;
+        }
+
+        .modules-card-description {
+          font-size: 16px;
+          color: #1c406c;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .carbon-tracking-header-section {
+    padding: 100px 40px;
+
+    .title {
+      font-size: 48px;
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+  }
+
+  .how-we-do-it-section {
+    padding: 48px 32px;
+
+    .title {
+      font-size: 40px;
+      margin-bottom: 60px;
+    }
+
+    .card-container {
+      gap: 40px;
+    }
+
+    .card {
+      .icon-container {
+        width: 30px;
+        height: 30px;
+
+        .card-icon {
+          height: 30px;
+        }
+      }
+
+      .card-title-desc-container {
+        padding: 8px 16px;
+
+        .card-title {
+          font-size: 18px;
+        }
+
+        .card-description {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .our-modules-section {
+    padding: 48px 32px;
+
+    .modules-title {
+      font-size: 40px;
+      margin-bottom: 60px;
+
+      .highlighted {
+        margin: 0 6px;
+      }
+
+      .line {
+        width: 50px;
+      }
+    }
+
+    .modules-card-container {
+      display: flex;
+      gap: 40px;
+      flex-direction: column;
+      align-content: center;
+      width: 100%;
+      justify-content: center;
+
+      .modules-card-wrapper {
+        width: 100%;
+        margin: 0;
+      }
+
+      .white-card {
+        height: 100%;
+        width: 100%;
+
+        .modules-card-content {
+          .modules-card-title {
+            font-size: 18px;
+          }
+
+          .modules-card-description {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .carbon-tracking-header-section {
+    padding: 80px 20px;
+    text-align: center;
+    align-items: center;
+
+    .title {
+      font-size: 28px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+    }
+  }
+
+  .how-we-do-it-section {
+    padding: 32px 20px;
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .card-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      width: 100%;
+
+      .icon-container {
+        width: 25px;
+        height: 25px;
+
+        .card-icon {
+          height: 25px;
+        }
+      }
+
+      .card-title-desc-container {
+        padding: 8px 12px;
+
+        .card-title {
+          font-size: 16px;
+        }
+
+        .card-description {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .our-modules-section {
+    padding: 32px 20px;
+
+    .modules-title {
+      font-size: 24px;
+      margin-bottom: 40px;
+
+      .highlighted {
+        margin: 0 6px;
+      }
+
+      .line {
+        width: 30px;
+      }
+    }
+
+    .modules-card-container {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      align-content: center;
+      width: 100%;
+      justify-content: center;
+
+      .modules-card-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0;
+      }
+
+      .blue-card {
+        background-color: #59abf6;
+        border-radius: 8px;
+        position: absolute;
+        top: 5px; /* Slight offset for layering effect */
+        right: 5px;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* Behind white card */
+      }
+
+      .white-card {
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+
+        .modules-card-content {
+          .modules-card-title {
+            font-size: 16px;
+          }
+
+          .modules-card-description {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
