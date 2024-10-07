@@ -2,12 +2,13 @@
 
 ## Available Scripts
 
-In the project directory, you can run:
+1. To get started with the project, follow these steps:
 
-### `npm start`
+2. Make sure you're in the project directory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Install the necessary dependencies by running:
+### `npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For In the project directory, you can run:
+
+### `npm run start`
