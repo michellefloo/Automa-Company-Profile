@@ -11,12 +11,20 @@ const loading = (
 const Navbar = React.lazy(() => import("./components/Layout/Navbar/Navbar"));
 
 // Main content
-const HomePage = React.lazy(() => import("./components/Pages/Home/HomePage"))
+const HomePage = React.lazy(() => import("./components/Pages/Home/HomePage"));
 
 // Our solutions
-const TransportationManagementSystem = React.lazy(() => import("./components/Pages/OurSolutions/TransportationManagementSystem/TransportationManagementSystem"))
-const CarbonTracking = React.lazy(() => import("./components/Pages/OurSolutions/CarbonTracking/CarbonTracking"))
-
+const TransportationManagementSystem = React.lazy(() =>
+  import(
+    "./components/Pages/OurSolutions/TransportationManagementSystem/TransportationManagementSystem"
+  )
+);
+const CarbonTracking = React.lazy(() =>
+  import("./components/Pages/OurSolutions/CarbonTracking/CarbonTracking")
+);
+const EnergyModeling = React.lazy(() =>
+  import("./components/Pages/OurSolutions/EnergyModeling/EnergyModeling")
+);
 
 const Footer = React.lazy(() => import("./components/Layout/Footer/Footer"));
 
@@ -30,8 +38,12 @@ function App() {
             <main className="main-content">
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/transport-management-system" element={<TransportationManagementSystem />} />
+                <Route
+                  path="/transport-management-system"
+                  element={<TransportationManagementSystem />}
+                />
                 <Route path="/carbon-tracking" element={<CarbonTracking />} />
+                <Route path="/energy-modeling" element={<EnergyModeling />} />
               </Routes>
             </main>
             <Footer />
