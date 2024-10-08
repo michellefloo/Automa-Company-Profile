@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./TransportationManagementSystem.module.scss";
 import { useNavigate } from "react-router-dom";
 import {
@@ -10,13 +10,15 @@ import {
   CardBody,
   Button,
 } from "reactstrap";
-import { cardTrackData, featuresTrackData } from "../../../constant/helper";
+import { cardTrackData, featuresTrackData, trackTexts } from "../../../constant/helper";
 import ArrowDropUpIcon from "../../../../assets/icons/ArrowDropUpIcon";
 import ArrowDropdownIcon from "../../../../assets/icons/ArrowDropdownIcon";
+import { LanguageContext } from "../../../../contexts/LanguageContexts";
 
 const TransportationManagementSystem = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
+  const { language } = useContext(LanguageContext);
 
   const toggle = (index) => {
     if (activeIndex === index) {
@@ -32,19 +34,16 @@ const TransportationManagementSystem = () => {
   return (
     <div>
       <div className={styles["tms-header-section"]}>
-        <h1 className={styles["title"]}>Track X</h1>
+        <h1 className={styles["title"]}>{trackTexts[language].headerTitle}</h1>
         <p className={styles["subtitle"]}>
-          We know managing fleets manually could be a stress-inducing task. Let
-          us do it for you! Our Track X platform’s designed to help you manage
-          your vehicles – to track locations, velocity, fleet condition, and
-          statistics in real-time.
+          {trackTexts[language].headerSubtitle}
         </p>
       </div>
 
       <div className={styles["what-do-we-track-section"]}>
-        <h1 className={styles["title"]}>What Do We Track?</h1>
+        <h1 className={styles["title"]}>{trackTexts[language].wdwtTitle}</h1>
         <div className={styles["card-container"]}>
-          {cardTrackData.map((card, index) => (
+          {cardTrackData[language].map((card, index) => (
             <Card
               className={styles["custom-card"]}
               key={index}
@@ -65,8 +64,12 @@ const TransportationManagementSystem = () => {
         <div className={styles["main-features-container"]}>
           <h1 className={styles["feature-title"]}>
             <span className={styles["line"]}></span>
-            <span className={styles["no-highlighted"]}>Main</span>
-            <span className={styles["highlighted"]}>Features</span>
+            <span className={styles["no-highlighted"]}>
+              {trackTexts[language].mainText}
+            </span>
+            <span className={styles["highlighted"]}>
+              {trackTexts[language].subText}
+            </span>
             <span className={styles["line"]}></span>
           </h1>
           <div className={styles["feature-card-container"]}>
@@ -106,14 +109,18 @@ const TransportationManagementSystem = () => {
       </div>
 
       <div className={styles["book-your-trial-section"]}>
-        <h1 className={styles["title"]}>Book Your Trial</h1>
+        <h1 className={styles["title"]}>
+          {trackTexts[language].bookYourTrialText}
+        </h1>
         <div className={styles["button-container"]}>
           <Button
             variant="secondary"
             className={styles["click-here-button"]}
             onClick={handleButtonClick}
           >
-            <div className={styles["button-text"]}>Click Here</div>
+            <div className={styles["button-text"]}>
+              {trackTexts[language].clickHereText}
+            </div>
           </Button>
         </div>
       </div>

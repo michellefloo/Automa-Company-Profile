@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./AboutUs.module.scss";
 import wweImage from "../../../assets/img/AboutUs/why-we-exist-image.png";
 import {
+  aboutUsTexts,
   missionCard,
   visionCard,
   wweCard,
 } from "../../constant/helper";
 import { Card, CardBody, CardImg, CardSubtitle, CardTitle } from "reactstrap";
+import { LanguageContext } from "../../../contexts/LanguageContexts";
 
 const AboutUs = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div>
       <div className={styles["about-us-header-section"]}>
-        <h1 className={styles["title"]}>About Us</h1>
+        <h1 className={styles["title"]}>
+          {aboutUsTexts[language].headerTitle}
+        </h1>
         <p className={styles["subtitle"]}>
-          Maximize your transportation services efficiency with our planning,
-          execution, and assessment services
+          {aboutUsTexts[language].headerSubtitle}
         </p>
       </div>
 
@@ -29,22 +34,28 @@ const AboutUs = () => {
           <div className={styles["wwe-text-container"]}>
             <p className={styles["wwe-headline"]}>
               <span className={styles["line"]}></span>
-              <span className={styles["text-headline"]}>About Us</span>
+              <span className={styles["text-headline"]}>
+                {aboutUsTexts[language].headlineText}
+              </span>
             </p>
             <h1 className={styles["wwe-title"]}>
-              <span className={styles["no-highlighted"]}>Why We </span>
-              <span className={styles["highlighted"]}>Exist?</span>
+              <span className={styles["no-highlighted"]}>
+                {aboutUsTexts[language].wweMainText}
+              </span>
+              <span className={styles["highlighted"]}>
+                {aboutUsTexts[language].wweSubText}
+              </span>
             </h1>
             <div className={styles["wwe-card-wrapper"]}>
               <div className={styles["blue-card"]}></div>
               <div className={styles["white-card"]}>
                 <div className={styles["wwe-card-content"]}>
-                  <h3 className={styles["wwe-card-title"]}>{wweCard.title}</h3>
+                  <h3 className={styles["wwe-card-title"]}>{wweCard[language].title}</h3>
                   <p className={styles["wwe-card-description"]}>
-                    <span>{wweCard.descriptionOne}</span>
-                    <span>{wweCard.descriptionTwo}</span>
-                    <span>{wweCard.descriptionThree}</span>
-                    <span>{wweCard.descriptionFour}</span>
+                    <span>{wweCard[language].descriptionOne}</span>
+                    <span>{wweCard[language].descriptionTwo}</span>
+                    <span>{wweCard[language].descriptionThree}</span>
+                    <span>{wweCard[language].descriptionFour}</span>
                   </p>
                 </div>
               </div>
@@ -56,8 +67,12 @@ const AboutUs = () => {
       <div className={styles["vision-and-mission-section"]}>
         <h1 className={styles["vision-mission-title"]}>
           <span className={styles["line"]}></span>
-          <span className={styles["no-highlighted"]}>Vision &</span>
-          <span className={styles["highlighted"]}>Mission</span>
+          <span className={styles["no-highlighted"]}>
+            {aboutUsTexts[language].visionText}
+          </span>
+          <span className={styles["highlighted"]}>
+            {aboutUsTexts[language].missionText}
+          </span>
           <span className={styles["line"]}></span>
         </h1>
         <div className={styles["card-container"]}>
@@ -66,15 +81,15 @@ const AboutUs = () => {
               style={{ borderRadius: "8px 8px 0 0" }}
               top
               width="100%"
-              src={visionCard.imgSrc}
-              alt={visionCard.title}
+              src={visionCard[language].imgSrc}
+              alt={visionCard[language].title}
             />
             <CardBody className={styles["card-body"]}>
               <CardTitle className={styles["card-title"]}>
-                {visionCard.title}
+                {visionCard[language].title}
               </CardTitle>
               <CardSubtitle className={styles["card-subtitle"]}>
-                {visionCard.subtitle}
+                {visionCard[language].subtitle}
               </CardSubtitle>
             </CardBody>
           </Card>
@@ -82,18 +97,18 @@ const AboutUs = () => {
           <Card className={styles["custom-card"]}>
             <CardBody className={styles["card-body"]}>
               <CardTitle className={styles["card-title"]}>
-                {missionCard.title}
+                {missionCard[language].title}
               </CardTitle>
               <CardSubtitle className={styles["card-subtitle"]}>
-                {missionCard.subtitle}
+                {missionCard[language].subtitle}
               </CardSubtitle>
             </CardBody>
             <CardImg
               style={{ borderRadius: "0 0 8px 8px" }}
               top
               width="100%"
-              src={missionCard.imgSrc}
-              alt={missionCard.title}
+              src={missionCard[language].imgSrc}
+              alt={missionCard[language].title}
             />
           </Card>
         </div>

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./EnergyModeling.module.scss";
 import { useNavigate } from "react-router-dom";
-import { cardEnermoData, featuresEnermoData } from "../../../constant/helper";
+import { cardEnermoData, enermoTexts, featuresEnermoData } from "../../../constant/helper";
 import {
   Button,
   Card,
@@ -13,10 +13,12 @@ import {
 } from "reactstrap";
 import ArrowDropdownIcon from "../../../../assets/icons/ArrowDropdownIcon";
 import ArrowDropUpIcon from "../../../../assets/icons/ArrowDropUpIcon";
+import { LanguageContext } from "../../../../contexts/LanguageContexts";
 
 const EnergyModeling = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const navigate = useNavigate();
+  const { language } = useContext(LanguageContext);
 
   const toggle = (index) => {
     if (activeIndex === index) {
@@ -32,17 +34,16 @@ const EnergyModeling = () => {
   return (
     <div>
       <div className={styles["energy-modeling-header-section"]}>
-        <h1 className={styles["title"]}>Energy Modelling</h1>
+        <h1 className={styles["title"]}>{enermoTexts[language].headerTitle}</h1>
         <p className={styles["subtitle"]}>
-          Get insight about how you could consume less with Metering, Energy
-          Modelling, and Audit.
+          {enermoTexts[language].headerSubtitle}
         </p>
       </div>
 
       <div className={styles["what-are-the-definition-section"]}>
-        <h1 className={styles["title"]}>What Are The Definition?</h1>
+        <h1 className={styles["title"]}>{enermoTexts[language].watdTitle}</h1>
         <div className={styles["card-container"]}>
-          {cardEnermoData.map((card, index) => (
+          {cardEnermoData[language].map((card, index) => (
             <Card
               className={styles["custom-card"]}
               key={index}
@@ -63,8 +64,12 @@ const EnergyModeling = () => {
         <div className={styles["main-features-container"]}>
           <h1 className={styles["feature-title"]}>
             <span className={styles["line"]}></span>
-            <span className={styles["no-highlighted"]}>Main</span>
-            <span className={styles["highlighted"]}>Features</span>
+            <span className={styles["no-highlighted"]}>
+              {enermoTexts[language].mainText}
+            </span>
+            <span className={styles["highlighted"]}>
+              {enermoTexts[language].subText}
+            </span>
             <span className={styles["line"]}></span>
           </h1>
           <div className={styles["feature-card-container"]}>
@@ -103,14 +108,18 @@ const EnergyModeling = () => {
         </div>
       </div>
       <div className={styles["book-your-trial-section"]}>
-        <h1 className={styles["title"]}>Book Your Trial</h1>
+        <h1 className={styles["title"]}>
+          {enermoTexts[language].bookYourTrialText}
+        </h1>
         <div className={styles["button-container"]}>
           <Button
             variant="secondary"
             className={styles["click-here-button"]}
             onClick={handleButtonClick}
           >
-            <div className={styles["button-text"]}>Click Here</div>
+            <div className={styles["button-text"]}>
+              {enermoTexts[language].clickHereText}
+            </div>
           </Button>
         </div>
       </div>

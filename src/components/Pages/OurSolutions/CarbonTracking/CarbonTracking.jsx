@@ -1,28 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CarbonTracking.module.scss";
 import {
-  cardCarbonTrackignModulesData,
+  carbonTrackingTexts,
+  cardCarbonTrackingModulesData,
   cardCarbonTrackingData,
 } from "../../../constant/helper";
+import { LanguageContext } from "../../../../contexts/LanguageContexts";
 
 const CarbonTracking = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <div>
       <div className={styles["carbon-tracking-header-section"]}>
         <h1 className={styles["title"]}>
-          Supply Chain Vertical Collaboration Platform
+          {carbonTrackingTexts[language].headerTitle}
         </h1>
         <p className={styles["subtitle"]}>
-          We want to help MNC and verticals track, calculate and trace Carbon
-          Footprint together with their vendors and local group using mainly
-          visibility or primary data
+          {carbonTrackingTexts[language].headerSubtitle}
         </p>
       </div>
 
       <div className={styles["how-we-do-it-section"]}>
-        <h1 className={styles["title"]}>How We Do It?</h1>
+        <h1 className={styles["title"]}>
+          {carbonTrackingTexts[language].hwdiTitle}
+        </h1>
         <div className={styles["card-container"]}>
-          {cardCarbonTrackingData.map((card) => (
+          {cardCarbonTrackingData[language].map((card) => (
             <div className={styles["card"]} key={card.id}>
               <img
                 src={card.image}
@@ -48,13 +52,20 @@ const CarbonTracking = () => {
       <div className={styles["our-modules-section"]}>
         <h1 className={styles["modules-title"]}>
           <span className={styles["line"]}></span>
-          <span className={styles["no-highlighted"]}>Our</span>
-          <span className={styles["highlighted"]}>Modules</span>
+          <span className={styles["no-highlighted"]}>
+            {carbonTrackingTexts[language].mainText}
+          </span>
+          <span className={styles["highlighted"]}>
+            {carbonTrackingTexts[language].subText}
+          </span>
           <span className={styles["line"]}></span>
         </h1>
         <div className={styles["modules-card-container"]}>
-          {cardCarbonTrackignModulesData.map((modulesCard) => (
-            <div className={styles["modules-card-wrapper"]} key={modulesCard.id}>
+          {cardCarbonTrackingModulesData[language].map((modulesCard) => (
+            <div
+              className={styles["modules-card-wrapper"]}
+              key={modulesCard.id}
+            >
               <div className={styles["blue-card"]}></div>
               <div className={styles["white-card"]}>
                 <div className={styles["modules-card-icon"]}>
