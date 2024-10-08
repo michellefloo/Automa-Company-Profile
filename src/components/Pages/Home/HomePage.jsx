@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./HomePage.module.scss";
 import {
   Button,
@@ -15,23 +15,30 @@ import fuelConsumptionIcon from "../../../assets/img/HomePage/fuel-consumption-i
 import proofOfDeliveryIcon from "../../../assets/img/HomePage/proof-of-delivery-icon.png";
 import ArrowLeftIcon from "../../../assets/icons/ArrowLeftIcon";
 import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon";
-import { cardData, carouselData, routeMapping } from "../../constant/helper";
+import {
+  carouselData,
+  homePagecardData,
+  homePageTexts,
+  routeMapping,
+} from "../../constant/helper";
+import { LanguageContext } from "../../../contexts/LanguageContexts";
 
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
+  const { language } = useContext(LanguageContext);
 
   // Function to handle left arrow click
   const handleLeftClick = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? carouselData.length - 1 : prevIndex - 1
+      prevIndex === 0 ? carouselData[language].length - 1 : prevIndex - 1
     );
   };
 
   // Function to handle right arrow click
   const handleRightClick = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1
+      prevIndex === carouselData[language].length - 1 ? 0 : prevIndex + 1
     );
   };
 
@@ -40,7 +47,7 @@ const HomePage = () => {
   };
 
   const handleButtonCarouselClick = () => {
-    const currentTitle = carouselData[currentIndex].title;
+    const currentTitle = carouselData[language][currentIndex].title;
     const route = routeMapping[currentTitle];
     if (route) {
       navigate(route);
@@ -50,10 +57,11 @@ const HomePage = () => {
   return (
     <>
       <div className={styles["homepage-header-section"]}>
-        <h1 className={styles["title"]}>Transportation Management System</h1>
+        <h1 className={styles["title"]}>
+          {homePageTexts[language].headerTitle}
+        </h1>
         <p className={styles["subtitle"]}>
-          Maximize your transportation services efficiency with our planning,
-          execution, and assessment services
+          {homePageTexts[language].headerSubtitle}
         </p>
         <div className={styles["button-container"]}>
           <Button
@@ -61,10 +69,10 @@ const HomePage = () => {
             className={`${styles["talk-to-us-button"]}`}
             onClick={handleButtonTalkToUsClick}
           >
-            Talk to Us
+            {homePageTexts[language].talkToUs}
           </Button>
           <Button color="secondary" className={`${styles["free-try-button"]}`}>
-            Try it For Free
+            {homePageTexts[language].tryForFree}
           </Button>
         </div>
       </div>
@@ -86,11 +94,10 @@ const HomePage = () => {
                 style={{ width: "40px", marginBottom: "20px" }}
               />
               <CardTitle className={styles["card-title"]} tag="h5">
-                Real Time Location
+                {homePageTexts[language].location.title}
               </CardTitle>
               <CardText className={styles["card-text"]}>
-                Your fleet(s) progress open to you transparently 24/7. Any
-                changes on the road will be recorded inch to inch.
+                {homePageTexts[language].location.description}
               </CardText>
             </CardBody>
           </Card>
@@ -108,11 +115,10 @@ const HomePage = () => {
                 style={{ width: "55px", marginBottom: "20px" }}
               />
               <CardTitle className={styles["card-title"]} tag="h5">
-                Operational KPI
+                {homePageTexts[language].operational.title}
               </CardTitle>
               <CardText className={styles["card-text"]}>
-                Implementing SCOR based dashboard, giving KPI reference to help
-                you operate an effective and efficient supply chain operation
+                {homePageTexts[language].operational.description}
               </CardText>
             </CardBody>
           </Card>
@@ -130,11 +136,10 @@ const HomePage = () => {
                 style={{ width: "44px", marginBottom: "20px" }}
               />
               <CardTitle className={styles["card-title"]} tag="h5">
-                Fuel Consumption
+                {homePageTexts[language].fuel.title}
               </CardTitle>
               <CardText className={styles["card-text"]}>
-                Support fuel leveling history, fill alert, theft alert, and
-                geotagging. You could verify fleet(s) fuel bills if needed
+                {homePageTexts[language].fuel.description}
               </CardText>
             </CardBody>
           </Card>
@@ -152,12 +157,10 @@ const HomePage = () => {
                 style={{ width: "89px", marginBottom: "20px" }}
               />
               <CardTitle className={styles["card-title"]} tag="h5">
-                Proof of Delivery
+                {homePageTexts[language].proof.title}
               </CardTitle>
               <CardText className={styles["card-text"]}>
-                Manage your delivery waypoint(s) with precise ETA and
-                waypoint(s) optimization. Audit each delivery trips and store
-                the proof of delivery
+                {homePageTexts[language].proof.description}
               </CardText>
             </CardBody>
           </Card>
@@ -165,7 +168,7 @@ const HomePage = () => {
         <div
           className={styles["carousel-container"]}
           style={{
-            backgroundImage: `url(${carouselData[currentIndex].imgSrc})`,
+            backgroundImage: `url(${carouselData[language][currentIndex].imgSrc})`, // Use language to select the correct data
           }}
         >
           <div className={styles["carousel-content"]}>
@@ -180,7 +183,7 @@ const HomePage = () => {
             </Button>
             <div className={styles["carbon-tracking-button-title-container"]}>
               <h1 className={styles["title"]}>
-                {carouselData[currentIndex].title}
+                {carouselData[language][currentIndex].title}
               </h1>
               <div className={styles["button-container"]}>
                 <Button
@@ -188,7 +191,9 @@ const HomePage = () => {
                   className={styles["click-here-button"]}
                   onClick={handleButtonCarouselClick}
                 >
-                  <div className={styles["button-text"]}>Click Here</div>
+                  <div className={styles["button-text"]}>
+                    {homePageTexts[language].clickHereButton}
+                  </div>
                 </Button>
               </div>
             </div>
@@ -207,7 +212,7 @@ const HomePage = () => {
 
       <div className={styles["solution-section"]}>
         <div className={styles["card-container"]}>
-          {cardData.map((card, index) => (
+          {homePagecardData[language].map((card, index) => (
             <Card className={styles["customCard"]} key={index}>
               <CardImg top width="100%" src={card.imgSrc} alt={card.title} />
               <CardBody className={styles["card-body"]}>

@@ -48,32 +48,197 @@ import auditImage from "../../assets/img/EnergyModeling/audit-image.png";
 import visionImage from "../../assets/img/AboutUs/vision-image.png";
 import missionImage from "../../assets/img/AboutUs/mission-image.png";
 
-export const cardData = [
-  { title: "Distribution Solution", imgSrc: distributionSolution },
-  { title: "3rd Party Logistic", imgSrc: thirdPartyLogistic },
-  { title: "Cold Storage Solution", imgSrc: coldStorageSolution },
-  { title: "Carbon Tracking", imgSrc: carbonTrackingSolution },
-];
+export const footerTexts = {
+  EN: {
+    followUs: "Follow Us",
+    company: {
+      title: "Company",
+      home: "Home",
+      aboutUs: "About Us",
+    },
+    solutions: {
+      title: "Our Solutions",
+      tms: "TMS",
+      carbonTracking: "Carbon Tracking",
+      energyModeling: "Energy Modeling",
+    },
+    resources: {
+      title: "Resources",
+      updates: "Updates",
+      faq: "FAQ",
+    },
+  },
 
-export const carouselData = [
-  {
-    title: "Carbon Tracking",
-    imgSrc: carouselImageOne,
+  ID: {
+    followUs: "Ikuti Kami",
+    company: {
+      title: "Perusahaan",
+      home: "Beranda",
+      aboutUs: "Tentang Kami",
+    },
+    solutions: {
+      title: "Solusi Kami",
+      tms: "TMS",
+      carbonTracking: "Pelacakan Karbon",
+      energyModeling: "Pemodelan Energi",
+    },
+    resources: {
+      title: "Resources",
+      updates: "Updates",
+      faq: "FAQ",
+    },
   },
-  {
-    title: "Transportation Management System",
-    imgSrc: carouselImageTwo,
+};
+
+export const navbarTexts = {
+  EN: {
+    home: "Home",
+    solutions: {
+      title: "Our Solutions",
+      tms: "Transportation Management System",
+      carbonTracking: "Carbon Tracking",
+      energyModeling: "Energy Modeling",
+    },
+    aboutUs: "About Us",
+    updates: "Updates",
+    faq: "FAQ",
+    contactUs: "Contact Us",
+    memberArea: "Member Area",
+    getDemo: "Get Demo",
   },
-  {
-    title: "Energy Modeling",
-    imgSrc: carouselImageThree,
+
+  ID: {
+    home: "Beranda",
+    solutions: {
+      title: "Solusi Kami",
+      tms: "Sistem Manajemen Transportasi",
+      carbonTracking: "Pelacakan Karbon",
+      energyModeling: "Pemodelan Energi",
+    },
+    aboutUs: "Tentang Kami",
+    updates: "Updates",
+    contactUs: "Hubungi Kami",
+    memberArea: "Jadi Anggota",
+    getDemo: "Demo",
+    faq: "FAQ",
   },
-];
+};
+
+export const homePageTexts = {
+  EN: {
+    headerTitle: "Transportation Management System",
+    headerSubtitle:
+      "Maximize your transportation services efficiency with our planning, execution, and assessment services",
+    talkToUs: "Talk to Us",
+    tryForFree: "Try it For Free",
+    trackTitle: "What do we track?",
+    location: {
+      title: "Real Time Location",
+      description:
+        "Your fleet(s) progress open to you transparently 24/7. Any changes on the road will be recorded inch to inch.",
+    },
+    operational: {
+      title: "Operational KPI",
+      description:
+        "Implementing SCOR based dashboard, giving KPI reference to help you operate an effective and efficient supply chain operation.",
+    },
+    fuel: {
+      title: "Fuel Consumption",
+      description:
+        "Support fuel leveling history, fill alert, theft alert, and geotagging. You could verify fleet(s) fuel bills if needed.",
+    },
+    proof: {
+      title: "Proof of Delivery",
+      description:
+        "Manage your delivery waypoint(s) with precise ETA and waypoint(s) optimization. Audit each delivery trips and store the proof of delivery.",
+    },
+    clickHereButton: "Click Here",
+  },
+  ID: {
+    headerTitle: "Sistem Manajemen Transportasi",
+    headerSubtitle:
+      "Maksimalkan efisiensi layanan transportasi Anda dengan layanan perencanaan, eksekusi, dan penilaian kami.",
+    talkToUs: "Hubungi Kami",
+    tryForFree: "Coba Gratis",
+    trackTitle: "Apa yang Kami Lacak?",
+    location: {
+      title: "Lokasi Waktu Nyata",
+      description:
+        "Perkembangan armada Anda terbuka untuk Anda secara transparan 24/7. Setiap perubahan di jalan akan dicatat inci demi inci.",
+    },
+    operational: {
+      title: "KPI Operasional",
+      description:
+        "Menerapkan dasbor berbasis SCOR, memberikan referensi KPI untuk membantu Anda mengoperasikan operasi rantai pasokan yang efektif dan efisien.",
+    },
+    fuel: {
+      title: "Konsumsi Bahan Bakar",
+      description:
+        "Dukung riwayat pengisian bahan bakar, peringatan pengisian, peringatan pencurian, dan geotagging. Anda bisa memverifikasi tagihan bahan bakar armada jika diperlukan.",
+    },
+    proof: {
+      title: "Bukti Pengiriman",
+      description:
+        "Kelola waypoint pengiriman Anda dengan ETA yang tepat dan optimasi waypoint. Audit setiap perjalanan pengiriman dan simpan bukti pengirimannya.",
+    },
+    clickHereButton: "Klik Di Sini",
+  },
+};
+
+export const homePagecardData = {
+  EN: [
+    { title: "Distribution Solution", imgSrc: distributionSolution },
+    { title: "3rd Party Logistic", imgSrc: thirdPartyLogistic },
+    { title: "Cold Storage Solution", imgSrc: coldStorageSolution },
+    { title: "Carbon Tracking", imgSrc: carbonTrackingSolution },
+  ],
+  ID: [
+    { title: "Solusi Distribusi", imgSrc: distributionSolution },
+    { title: "Logistik Pihak Ketiga", imgSrc: thirdPartyLogistic },
+    { title: "Solusi Penyimpanan Dingin", imgSrc: coldStorageSolution },
+    { title: "Pelacakan Karbon", imgSrc: carbonTrackingSolution },
+  ],
+};
+
+export const carouselData = {
+  EN: [
+    {
+      title: "Carbon Tracking",
+      imgSrc: carouselImageOne,
+    },
+    {
+      title: "Transportation Management System",
+      imgSrc: carouselImageTwo,
+    },
+    {
+      title: "Energy Modeling",
+      imgSrc: carouselImageThree,
+    },
+  ],
+  ID: [
+    {
+      title: "Pelacakan Karbon",
+      imgSrc: carouselImageOne,
+    },
+    {
+      title: "Sistem Manajemen Transportasi",
+      imgSrc: carouselImageTwo,
+    },
+    {
+      title: "Pemodelan Energi", // Corrected this line
+      imgSrc: carouselImageThree,
+    },
+  ],
+};
 
 export const routeMapping = {
   "Carbon Tracking": "/carbon-tracking",
   "Transportation Management System": "/transport-management-system",
   "Energy Modeling": "/energy-modeling",
+
+  "Pelacakan Karbon": "/carbon-tracking",
+  "Sistem Manajemen Transportasi": "/transport-management-system",
+  "Pemodelan Energi": "/energy-modeling",
 };
 
 export const cardTrackData = [

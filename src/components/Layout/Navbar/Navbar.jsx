@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -17,11 +17,16 @@ import styles from "./Navbar.module.scss";
 import logo from "../../../assets/img/logo.png";
 import USFlag from "../../../assets/img/USFlag.png";
 import IDFlag from "../../../assets/img/IDFlag.png";
+import { LanguageContext } from "../../../contexts/LanguageContexts";
+import { navbarTexts } from "../../constant/helper";
+
 
 const NavbarCompanyProfile = () => {
+  const { language, switchLanguage } = useContext(LanguageContext); 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
 
   return (
     <Navbar color="dark" dark expand="md" className={styles["navbar-custom"]}>
@@ -51,12 +56,12 @@ const NavbarCompanyProfile = () => {
                   isActive ? "active nav-link" : "nav-link"
                 }
               >
-                Home
+                {navbarTexts[language].home}
               </RouterNavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Our Solutions
+                {navbarTexts[language].solutions.title}
               </DropdownToggle>
               <DropdownMenu className={styles["dropdown-nav-item"]}>
                 <DropdownItem>
@@ -66,7 +71,7 @@ const NavbarCompanyProfile = () => {
                       isActive ? "dropdown-item active" : "dropdown-item"
                     }
                   >
-                    Transport Management System
+                    {navbarTexts[language].solutions.tms}
                   </RouterNavLink>
                 </DropdownItem>
                 <DropdownItem>
@@ -76,7 +81,7 @@ const NavbarCompanyProfile = () => {
                       isActive ? "dropdown-item active" : "dropdown-item"
                     }
                   >
-                    Carbon Tracking
+                    {navbarTexts[language].solutions.carbonTracking}
                   </RouterNavLink>
                 </DropdownItem>
                 <DropdownItem>
@@ -86,7 +91,7 @@ const NavbarCompanyProfile = () => {
                       isActive ? "dropdown-item active" : "dropdown-item"
                     }
                   >
-                    Energy Modeling
+                    {navbarTexts[language].solutions.energyModeling}
                   </RouterNavLink>
                 </DropdownItem>
               </DropdownMenu>
@@ -98,7 +103,7 @@ const NavbarCompanyProfile = () => {
                   isActive ? "active nav-link" : "nav-link"
                 }
               >
-                About Us
+                {navbarTexts[language].aboutUs}
               </RouterNavLink>
             </NavItem>
             <NavItem>
@@ -108,7 +113,7 @@ const NavbarCompanyProfile = () => {
                   isActive ? "active nav-link" : "nav-link"
                 }
               >
-                Updates
+                {navbarTexts[language].updates}
               </RouterNavLink>
             </NavItem>
             <NavItem>
@@ -118,7 +123,7 @@ const NavbarCompanyProfile = () => {
                   isActive ? "active nav-link" : "nav-link"
                 }
               >
-                FAQ
+                {navbarTexts[language].faq}
               </RouterNavLink>
             </NavItem>
             <NavItem>
@@ -128,7 +133,7 @@ const NavbarCompanyProfile = () => {
                   isActive ? "active nav-link" : "nav-link"
                 }
               >
-                Contact Us
+                {navbarTexts[language].contactUs}
               </RouterNavLink>
             </NavItem>
           </Nav>
@@ -139,21 +144,38 @@ const NavbarCompanyProfile = () => {
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 <img
-                  src={USFlag}
+                  src={language === "EN" ? USFlag : IDFlag}
                   alt="language"
                   style={{ width: "20px", marginRight: "8px" }}
                 />
-                EN
+                {language}
               </DropdownToggle>
               <DropdownMenu className={styles["dropdown-menu-custom"]}>
-                <DropdownItem className={styles["dropdown-item-custom"]}>
-                  <img
-                    src={IDFlag}
-                    alt="language"
-                    style={{ width: "20px", marginRight: "8px" }}
-                  />
-                  ID
-                </DropdownItem>
+                {language === "EN" ? (
+                  <DropdownItem
+                    className={styles["dropdown-item-custom"]}
+                    onClick={() => switchLanguage("ID")}
+                  >
+                    <img
+                      src={IDFlag}
+                      alt="language"
+                      style={{ width: "20px", marginRight: "8px" }}
+                    />
+                    ID
+                  </DropdownItem>
+                ) : (
+                  <DropdownItem
+                    className={styles["dropdown-item-custom"]}
+                    onClick={() => switchLanguage("EN")}
+                  >
+                    <img
+                      src={USFlag}
+                      alt="language"
+                      style={{ width: "20px", marginRight: "8px" }}
+                    />
+                    EN
+                  </DropdownItem>
+                )}
               </DropdownMenu>
             </UncontrolledDropdown>
 
@@ -163,7 +185,7 @@ const NavbarCompanyProfile = () => {
                 color="primary"
                 className={`${styles["member-area-button"]}`}
               >
-                Member Area
+                {navbarTexts[language].memberArea}
               </Button>
             </NavItem>
             <NavItem>
@@ -172,7 +194,7 @@ const NavbarCompanyProfile = () => {
                 className={`${styles["get-demo-button"]}`}
                 outline
               >
-                Get Demo
+                {navbarTexts[language].getDemo}
               </Button>
             </NavItem>
           </Nav>

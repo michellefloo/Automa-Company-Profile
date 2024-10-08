@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Footer.module.scss";
 import logo from "../../../assets/img/logo.png";
 import IGIcon from "../../../assets/icons/IGIcon";
 import LinkedinIcon from "../../../assets/icons/LinkedinIcon";
 import { Badge } from "reactstrap";
+import { LanguageContext } from "../../../contexts/LanguageContexts";
+import { footerTexts } from "../../constant/helper";
 
 const Footer = () => {
+  const { language } = useContext(LanguageContext);
+
   return (
     <footer className={styles["footer"]}>
       <div className={styles["footer-container"]}>
@@ -20,7 +24,9 @@ const Footer = () => {
           <p className={styles["footer-company"]}>
             &copy; 2024 PT Sentra Solusi Automa
           </p>
-          <p className={styles["footer-follow-us"]}>Follow Us</p>
+          <p className={styles["footer-follow-us"]}>
+            {footerTexts[language].followUs}
+          </p>
           <div className={styles["social-media"]}>
             <Badge color="primary" className={styles["instagram-icon"]}>
               <a href="https://www.instagram.com/automa_supply_chain/">
@@ -37,16 +43,18 @@ const Footer = () => {
 
         {/* Company Section */}
         <div className={styles["company-section"]}>
-          <h4 className={styles["title"]}>Company</h4>
+          <h4 className={styles["title"]}>
+            {footerTexts[language].company.title}
+          </h4>
           <ul className={styles["custom-ul"]}>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/">
-                Home
+                {footerTexts[language].company.home}
               </a>
             </li>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/about-us">
-                About Us
+                {footerTexts[language].company.aboutUs}
               </a>
             </li>
           </ul>
@@ -54,24 +62,26 @@ const Footer = () => {
 
         {/* Our Solutions Section */}
         <div className={styles["our-solutions-section"]}>
-          <h4 className={styles["title"]}>Our Solutions</h4>
+          <h4 className={styles["title"]}>
+            {footerTexts[language].solutions.title}
+          </h4>
           <ul className={styles["custom-ul"]}>
             <li className={styles["custom-li"]}>
               <a
                 className={styles["custom-a"]}
                 href="/transport-management-system"
               >
-                TMS
+                {footerTexts[language].solutions.tms}
               </a>
             </li>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/carbon-tracking">
-                Carbon Tracking
+                {footerTexts[language].solutions.carbonTracking}
               </a>
             </li>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/energy-modeling">
-                Energy Modeling
+                {footerTexts[language].solutions.energyModeling}
               </a>
             </li>
           </ul>
@@ -79,16 +89,18 @@ const Footer = () => {
 
         {/* Resources Section */}
         <div className={styles["resources-section"]}>
-          <h4 className={styles["title"]}>Resources</h4>
+          <h4 className={styles["title"]}>
+            {footerTexts[language].resources.title}
+          </h4>
           <ul className={styles["custom-ul"]}>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/updates">
-                Updates
+                {footerTexts[language].resources.updates}
               </a>
             </li>
             <li className={styles["custom-li"]}>
               <a className={styles["custom-a"]} href="/faq">
-                FAQ
+                {footerTexts[language].resources.FAQ}
               </a>
             </li>
           </ul>
