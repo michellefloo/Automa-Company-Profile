@@ -1,7 +1,19 @@
 {
   "name": "automa-company-profile",
   "version": "0.1.0",
+  "description": "Automa's Company Profile",
+  "author": {
+    "name": "Sentra Solusi Automa",
+    "url": "https://x.automa.id",
+    "github": "https://github.com/automaid",
+    "instagram": "https://www.instagram.com/automa_supply_chain/"
+  },
+  "copyright": "Copyright 2024 Sentra Solusi Automa, PT.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alvinjulian/Automa-Platform-Web.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -42,5 +54,9 @@
   },
   "devDependencies": {
     "sass": "^1.32.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 }
