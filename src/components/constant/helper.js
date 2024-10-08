@@ -70,6 +70,12 @@ export const carouselData = [
   },
 ];
 
+export const routeMapping = {
+  "Carbon Tracking": "/carbon-tracking",
+  "Transportation Management System": "/transport-management-system",
+  "Energy Modeling": "/energy-modeling",
+};
+
 export const cardTrackData = [
   {
     title: "Real Time Location",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./TransportationManagementSystem.module.scss";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardTitle,
@@ -15,6 +16,7 @@ import ArrowDropdownIcon from "../../../../assets/icons/ArrowDropdownIcon";
 
 const TransportationManagementSystem = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggle = (index) => {
     if (activeIndex === index) {
@@ -22,6 +24,10 @@ const TransportationManagementSystem = () => {
     } else {
       setActiveIndex(index);
     }
+  };
+
+  const handleButtonClick = () => {
+    navigate("/contact-us");
   };
   return (
     <div>
@@ -102,7 +108,11 @@ const TransportationManagementSystem = () => {
       <div className={styles["book-your-trial-section"]}>
         <h1 className={styles["title"]}>Book Your Trial</h1>
         <div className={styles["button-container"]}>
-          <Button variant="secondary" className={styles["click-here-button"]}>
+          <Button
+            variant="secondary"
+            className={styles["click-here-button"]}
+            onClick={handleButtonClick}
+          >
             <div className={styles["button-text"]}>Click Here</div>
           </Button>
         </div>

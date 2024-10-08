@@ -8,17 +8,18 @@ import {
   CardText,
   CardTitle,
 } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 import locationIcon from "../../../assets/img/HomePage/location-icon.png";
 import operationalIcon from "../../../assets/img/HomePage/operational-icon.png";
 import fuelConsumptionIcon from "../../../assets/img/HomePage/fuel-consumption-icon.png";
 import proofOfDeliveryIcon from "../../../assets/img/HomePage/proof-of-delivery-icon.png";
 import ArrowLeftIcon from "../../../assets/icons/ArrowLeftIcon";
 import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon";
-import { cardData, carouselData } from "../../constant/helper";
-
+import { cardData, carouselData, routeMapping } from "../../constant/helper";
 
 const HomePage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   // Function to handle left arrow click
   const handleLeftClick = () => {
@@ -34,6 +35,18 @@ const HomePage = () => {
     );
   };
 
+  const handleButtonTalkToUsClick = () => {
+    navigate("/contact-us");
+  };
+
+  const handleButtonCarouselClick = () => {
+    const currentTitle = carouselData[currentIndex].title;
+    const route = routeMapping[currentTitle];
+    if (route) {
+      navigate(route);
+    }
+  };
+
   return (
     <>
       <div className={styles["homepage-header-section"]}>
@@ -43,7 +56,11 @@ const HomePage = () => {
           execution, and assessment services
         </p>
         <div className={styles["button-container"]}>
-          <Button color="primary" className={`${styles["talk-to-us-button"]}`}>
+          <Button
+            color="primary"
+            className={`${styles["talk-to-us-button"]}`}
+            onClick={handleButtonTalkToUsClick}
+          >
             Talk to Us
           </Button>
           <Button color="secondary" className={`${styles["free-try-button"]}`}>
@@ -169,6 +186,7 @@ const HomePage = () => {
                 <Button
                   variant="secondary"
                   className={styles["click-here-button"]}
+                  onClick={handleButtonCarouselClick}
                 >
                   <div className={styles["button-text"]}>Click Here</div>
                 </Button>

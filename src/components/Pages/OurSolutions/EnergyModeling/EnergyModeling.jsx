@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./EnergyModeling.module.scss";
+import { useNavigate } from "react-router-dom";
 import { cardEnermoData, featuresEnermoData } from "../../../constant/helper";
 import {
   Button,
@@ -15,6 +16,7 @@ import ArrowDropUpIcon from "../../../../assets/icons/ArrowDropUpIcon";
 
 const EnergyModeling = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const navigate = useNavigate();
 
   const toggle = (index) => {
     if (activeIndex === index) {
@@ -22,6 +24,10 @@ const EnergyModeling = () => {
     } else {
       setActiveIndex(index);
     }
+  };
+
+  const handleButtonClick = () => {
+    navigate("/contact-us");
   };
   return (
     <div>
@@ -99,7 +105,11 @@ const EnergyModeling = () => {
       <div className={styles["book-your-trial-section"]}>
         <h1 className={styles["title"]}>Book Your Trial</h1>
         <div className={styles["button-container"]}>
-          <Button variant="secondary" className={styles["click-here-button"]}>
+          <Button
+            variant="secondary"
+            className={styles["click-here-button"]}
+            onClick={handleButtonClick}
+          >
             <div className={styles["button-text"]}>Click Here</div>
           </Button>
         </div>
