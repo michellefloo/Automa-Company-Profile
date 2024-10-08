@@ -44,6 +44,10 @@ import modellingImage from "../../assets/img/EnergyModeling/modelling-image.png"
 import monitoringDashboardImage from "../../assets/img/EnergyModeling/monitoring-dashboard-image.png";
 import auditImage from "../../assets/img/EnergyModeling/audit-image.png";
 
+// About Us
+import visionImage from "../../assets/img/AboutUs/vision-image.png";
+import missionImage from "../../assets/img/AboutUs/mission-image.png";
+
 export const cardData = [
   { title: "Distribution Solution", imgSrc: distributionSolution },
   { title: "3rd Party Logistic", imgSrc: thirdPartyLogistic },
@@ -244,3 +248,28 @@ export const featuresEnermoData = [
     content: auditImage,
   },
 ];
+
+export const wweCard = {
+  title: "Automa started as customized IOT solutions provider. ",
+  descriptionOne:
+    "We handled multiple sector of IOT projects, starting from manufacturer, mining, utility and logistic. Collaborating closely with distribution company or partners gave us insight to develop our products to tackle the issues in supply chain business. Now Automa deliver supply chain IOT solution with flexible business model as SAAS, PASS and Pay-per API Call basis pricing model.",
+  descriptionTwo:
+    "Along with the widespread implementation of Sustainable Procurement as an action to tackle Global Warming, people start to assess carbon emissions emitted by traded item. Applied in Business to Business (B2B) transactions, procurators can choose goods with carbon emission levels that are in accordance with the carbon budget set by their institutions.",
+  descriptionThree:
+    "In addition, carbon emission assessments can also be given to sales with a Business to Customer (B2C) model on brands that claim to sell green products or sell with Green Premium accessories to avoid the practice of green washing. ",
+  descriptionFour:
+    "Unfortunately, practicing sustainable procurement in full only possible after a community practice sustainable supply chain. Nowadays, developing countries that still left behind on the supply chain visibility as the main pillar, have problems on applying sustainable supply chain.",
+};
+
+export const visionCard = {
+  title: "Our Vision",
+  subtitle: "We want to create a inclusive zero carbon economy ",
+  imgSrc: visionImage,
+};
+
+export const missionCard = {
+  title: "Our Mission",
+  subtitle:
+    "We want to create a Global Integration Platform that enable vendors and customers to collaborate their entire supply chain primary data",
+  imgSrc: missionImage,
+};

@@ -107,8 +107,7 @@
 }
 
 .our-modules-section {
-  background-image: url("../../../../assets/img/CarbonTracking/background-our-modules.png");
-  background-size: cover;
+  background-color: #E7F3F9;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -205,9 +204,9 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 996px) {
   .carbon-tracking-header-section {
-    padding: 100px 40px;
+    padding: 100px 60px;
 
     .title {
       font-size: 48px;
@@ -219,7 +218,7 @@
   }
 
   .how-we-do-it-section {
-    padding: 48px 32px;
+    padding: 48px 60px;
 
     .title {
       font-size: 40px;
@@ -255,7 +254,7 @@
   }
 
   .our-modules-section {
-    padding: 48px 32px;
+    padding: 48px 60px;
 
     .modules-title {
       font-size: 40px;
@@ -303,7 +302,7 @@
 
 @media (max-width: 576px) {
   .carbon-tracking-header-section {
-    padding: 80px 20px;
+    padding: 80px 40px;
     text-align: center;
     align-items: center;
 
@@ -317,7 +316,7 @@
   }
 
   .how-we-do-it-section {
-    padding: 32px 20px;
+    padding: 32px 40px;
 
     .title {
       font-size: 24px;
@@ -356,7 +355,7 @@
   }
 
   .our-modules-section {
-    padding: 32px 20px;
+    padding: 32px 40px;
 
     .modules-title {
       font-size: 24px;

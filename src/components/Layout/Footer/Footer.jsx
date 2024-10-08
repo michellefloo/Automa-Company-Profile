@@ -2,8 +2,7 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import logo from "../../../assets/img/logo.png";
 import IGIcon from "../../../assets/icons/IGIcon";
-import FBIcon from "../../../assets/icons/FBIcon"
-import LinkedinIcon from "../../../assets/icons/LinkedinIcon"
+import LinkedinIcon from "../../../assets/icons/LinkedinIcon";
 import { Badge } from "reactstrap";
 
 const Footer = () => {
@@ -24,13 +23,14 @@ const Footer = () => {
           <p className={styles["footer-follow-us"]}>Follow Us</p>
           <div className={styles["social-media"]}>
             <Badge color="primary" className={styles["instagram-icon"]}>
-              <IGIcon color="#FFFF" width="20px" height="18px" />
+              <a href="https://www.instagram.com/automa_supply_chain/">
+                <IGIcon color="#FFFF" width="20px" height="18px" />
+              </a>
             </Badge>
             <Badge color="primary" className={styles["instagram-icon"]}>
-              <FBIcon color="#FFFF" width="20px" height="18px" />
-            </Badge>
-            <Badge color="primary" className={styles["instagram-icon"]}>
-              <LinkedinIcon color="#FFFF" width="16px" height="16px" />
+              <a href="https://www.linkedin.com/company/automachain/mycompany/">
+                <LinkedinIcon color="#FFFF" width="16px" height="16px" />
+              </a>
             </Badge>
           </div>
         </div>
@@ -57,7 +57,10 @@ const Footer = () => {
           <h4 className={styles["title"]}>Our Solutions</h4>
           <ul className={styles["custom-ul"]}>
             <li className={styles["custom-li"]}>
-              <a className={styles["custom-a"]} href="/transport-management-system">
+              <a
+                className={styles["custom-a"]}
+                href="/transport-management-system"
+              >
                 Transportation Management System
               </a>
             </li>

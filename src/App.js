@@ -10,6 +10,8 @@ const loading = (
 );
 
 const Navbar = React.lazy(() => import("./components/Layout/Navbar/Navbar"));
+
+// Main Content
 const HomePage = React.lazy(() => import("./components/Pages/Home/HomePage"));
 const TransportationManagementSystem = React.lazy(() =>
   import(
@@ -22,6 +24,8 @@ const CarbonTracking = React.lazy(() =>
 const EnergyModeling = React.lazy(() =>
   import("./components/Pages/OurSolutions/EnergyModeling/EnergyModeling")
 );
+const AboutUs = React.lazy(() => import("./components/Pages/About/AboutUs"));
+
 const Footer = React.lazy(() => import("./components/Layout/Footer/Footer"));
 
 function App() {
@@ -40,7 +44,7 @@ function App() {
               />
               <Route path="/carbon-tracking" element={<CarbonTracking />} />
               <Route path="/energy-modeling" element={<EnergyModeling />} />
-              <Route path="/about-us" element={<div>About Us Page</div>} />
+              <Route path="/about-us" element={<AboutUs />} />
               <Route path="/updates" element={<div>Updates Page</div>} />
               <Route path="/faq" element={<div>FAQ Page</div>} />
               <Route path="/contact-us" element={<div>Contact Us Page</div>} />

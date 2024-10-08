@@ -122,7 +122,7 @@
       }
 
       .highlighted {
-        color: #007bff; /* blue color for 'Features' */
+        color: #007bff; 
         margin: 0 10px;
       }
 
@@ -248,7 +248,7 @@
 
 @media (max-width: 996px) {
   .tms-header-section {
-    padding: 100px 40px;
+    padding: 100px 60px;
     text-align: left;
 
     .title {
@@ -261,7 +261,7 @@
   }
 
   .what-do-we-track-section {
-    padding: 80px 40px;
+    padding: 80px 60px;
 
     .title {
       font-size: 36px;
@@ -323,7 +323,7 @@
   }
 
   .book-your-trial-section {
-    padding: 90px 40px;
+    padding: 90px 60px;
 
     .title {
       font-size: 36px;
@@ -352,7 +352,7 @@
 
 @media (max-width: 576px) {
   .tms-header-section {
-    padding: 80px 20px;
+    padding: 80px 40px;
     text-align: center;
     align-items: center;
 
@@ -366,7 +366,7 @@
   }
 
   .what-do-we-track-section {
-    padding: 40px 20px;
+    padding: 40px 40px;
 
     .title {
       font-size: 24px;
@@ -432,7 +432,7 @@
   }
 
   .book-your-trial-section {
-    padding: 40px 20px;
+    padding: 40px 40px;
 
     .title {
       font-size: 24px;
