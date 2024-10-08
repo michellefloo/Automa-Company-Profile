@@ -158,7 +158,7 @@ const HomePage = () => {
               onClick={handleLeftClick}
             >
               <div className={styles["arrow-left-icon"]}>
-                <ArrowLeftIcon width={20} height={20} color="#1C406C" />
+                <ArrowLeftIcon width={20} height={30} color="#1C406C" />
               </div>
             </Button>
             <div className={styles["carbon-tracking-button-title-container"]}>
@@ -180,7 +180,7 @@ const HomePage = () => {
               onClick={handleRightClick}
             >
               <div className={styles["arrow-right-icon"]}>
-                <ArrowRightIcon width={20} height={20} color="#1C406C" />
+                <ArrowRightIcon width={20} height={30} color="#1C406C" />
               </div>
             </Button>
           </div>
