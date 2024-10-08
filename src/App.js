@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TitleUpdater from "./TitleUpdater";
 
 const loading = (
   <div className="pt-3 text-center">
@@ -9,11 +10,7 @@ const loading = (
 );
 
 const Navbar = React.lazy(() => import("./components/Layout/Navbar/Navbar"));
-
-// Main content
 const HomePage = React.lazy(() => import("./components/Pages/Home/HomePage"));
-
-// Our solutions
 const TransportationManagementSystem = React.lazy(() =>
   import(
     "./components/Pages/OurSolutions/TransportationManagementSystem/TransportationManagementSystem"
@@ -25,32 +22,34 @@ const CarbonTracking = React.lazy(() =>
 const EnergyModeling = React.lazy(() =>
   import("./components/Pages/OurSolutions/EnergyModeling/EnergyModeling")
 );
-
 const Footer = React.lazy(() => import("./components/Layout/Footer/Footer"));
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Suspense fallback={loading}>
-          <div className="app-container">
-            <Navbar />
-            <main className="main-content">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route
-                  path="/transport-management-system"
-                  element={<TransportationManagementSystem />}
-                />
-                <Route path="/carbon-tracking" element={<CarbonTracking />} />
-                <Route path="/energy-modeling" element={<EnergyModeling />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
-        </Suspense>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Suspense fallback={loading}>
+        <div className="app-container">
+          <Navbar />
+          <main className="main-content">
+            <TitleUpdater />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/transport-management-system"
+                element={<TransportationManagementSystem />}
+              />
+              <Route path="/carbon-tracking" element={<CarbonTracking />} />
+              <Route path="/energy-modeling" element={<EnergyModeling />} />
+              <Route path="/about-us" element={<div>About Us Page</div>} />
+              <Route path="/updates" element={<div>Updates Page</div>} />
+              <Route path="/faq" element={<div>FAQ Page</div>} />
+              <Route path="/contact-us" element={<div>Contact Us Page</div>} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 
