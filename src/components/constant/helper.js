@@ -22,16 +22,27 @@ import emailWAReportImage from "../../assets/img/TMS/email-report-whatsapp-image
 import thirdPartySupportImage from "../../assets/img/TMS/3pl-image.png";
 
 // Carbon Tracking
-import visibilityIcon from "../../assets/img/CarbonTracking/visibility-icon.png"
-import integrityIcon from "../../assets/img/CarbonTracking/integrity-icon.png"
-import allianceIcon from "../../assets/img/CarbonTracking/alliance-icon.png"
-import visibilityImage from "../../assets/img/CarbonTracking/visibility-image.png"
-import integrityImage from "../../assets/img/CarbonTracking/integrity-image.png"
-import allianceImage from "../../assets/img/CarbonTracking/alliance-image.png"
-import tmsIcon from "../../assets/img/CarbonTracking/tms-icon.png"
-import energyModelingIcon from "../../assets/img/CarbonTracking/energy-modeling-icon.png"
-import stockerIcon from "../../assets/img/CarbonTracking/stocker-icon.png"
-import pointHubIcon from "../../assets/img/CarbonTracking/point-hub-icon.png"
+import visibilityIcon from "../../assets/img/CarbonTracking/visibility-icon.png";
+import integrityIcon from "../../assets/img/CarbonTracking/integrity-icon.png";
+import allianceIcon from "../../assets/img/CarbonTracking/alliance-icon.png";
+import visibilityImage from "../../assets/img/CarbonTracking/visibility-image.png";
+import integrityImage from "../../assets/img/CarbonTracking/integrity-image.png";
+import allianceImage from "../../assets/img/CarbonTracking/alliance-image.png";
+import tmsIcon from "../../assets/img/CarbonTracking/tms-icon.png";
+import energyModelingIcon from "../../assets/img/CarbonTracking/energy-modeling-icon.png";
+import stockerIcon from "../../assets/img/CarbonTracking/stocker-icon.png";
+import pointHubIcon from "../../assets/img/CarbonTracking/point-hub-icon.png";
+
+// Enermo
+import cardEnermoImageOne from "../../assets/img/EnergyModeling/background-energy-metering.png";
+import cardEnermoImageTwo from "../../assets/img/EnergyModeling/background-energy-modeling.png";
+import cardEnermoImageThree from "../../assets/img/EnergyModeling/background-audit.png";
+import devicesElectricityImage from "../../assets/img/EnergyModeling/devices-to-electrical-panel-integration-image.png";
+import sensorPlatformBindingImage from "../../assets/img/EnergyModeling/sensor-platform-binding-image.png";
+import utilityAndLocationImage from "../../assets/img/EnergyModeling/utility-and-location-image.png";
+import modellingImage from "../../assets/img/EnergyModeling/modelling-image.png";
+import monitoringDashboardImage from "../../assets/img/EnergyModeling/monitoring-dashboard-image.png";
+import auditImage from "../../assets/img/EnergyModeling/audit-image.png";
 
 export const cardData = [
   { title: "Distribution Solution", imgSrc: distributionSolution },
@@ -82,7 +93,7 @@ export const cardTrackData = [
   },
 ];
 
-export const featuresData = [
+export const featuresTrackData = [
   {
     title: "Sensor System",
     content: sensorOptionsTruckImage,
@@ -183,5 +194,53 @@ export const cardCarbonTrackignModulesData = [
     icon: pointHubIcon,
     width: 30,
     height: 40,
+  },
+];
+
+export const cardEnermoData = [
+  {
+    title: "Metering",
+    subtitle:
+      "We believe that efficiency start from visibility. Visibility creates trust that become the base to gain any insight. Metering will unlock hidden values surrounding your energy consumption insight",
+    imgSrc: cardEnermoImageOne,
+  },
+  {
+    title: "Energy Modelling",
+    subtitle:
+      "Achieve a more observable way to gain visibility by bringing your location layout into the system and create a mapping for every utility with it's metering devices",
+    imgSrc: cardEnermoImageTwo,
+  },
+  {
+    title: "Audit",
+    subtitle:
+      "The process initiated by doing Energy Audit, internally or externally, should be done by Certified Energy Auditor to maintain audit standard and data integrity. our vision is to become a self audit solution",
+    imgSrc: cardEnermoImageThree,
+  },
+];
+
+export const featuresEnermoData = [
+  {
+    title: "Devices to Electrical Panel Integration",
+    content: devicesElectricityImage,
+  },
+  {
+    title: "Sensor to Platform Binding",
+    content: sensorPlatformBindingImage,
+  },
+  {
+    title: "Utility and Location",
+    content: utilityAndLocationImage,
+  },
+  {
+    title: "Modelling",
+    content: modellingImage,
+  },
+  {
+    title: "Monitoring Dashboard",
+    content: monitoringDashboardImage,
+  },
+  {
+    title: "Audit",
+    content: auditImage,
   },
 ];

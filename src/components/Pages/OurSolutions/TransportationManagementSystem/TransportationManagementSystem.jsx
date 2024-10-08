@@ -9,7 +9,7 @@ import {
   CardBody,
   Button,
 } from "reactstrap";
-import { cardTrackData, featuresData } from "../../../constant/helper";
+import { cardTrackData, featuresTrackData } from "../../../constant/helper";
 import ArrowDropUpIcon from "../../../../assets/icons/ArrowDropUpIcon";
 import ArrowDropdownIcon from "../../../../assets/icons/ArrowDropdownIcon";
 
@@ -64,7 +64,7 @@ const TransportationManagementSystem = () => {
             <span className={styles["line"]}></span>
           </h1>
           <div className={styles["feature-card-container"]}>
-            {featuresData.map((feature, index) => (
+            {featuresTrackData.map((feature, index) => (
               <Card className={styles["feature-card"]} key={index}>
                 <CardHeader
                   onClick={() => toggle(index)}

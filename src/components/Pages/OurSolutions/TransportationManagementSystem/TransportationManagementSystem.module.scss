@@ -106,6 +106,7 @@
     text-align: center;
     padding: 64px 80px;
     border-radius: 8px;
+    width: 100%;
 
     .feature-title {
       display: flex;
@@ -145,7 +146,7 @@
         margin: 0;
         border: 1;
         border-color: white;
-        width: 1056px;
+        width: 100%;
         border-radius: 8px;
 
         .feature-card-header {
