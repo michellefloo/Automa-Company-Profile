@@ -61,7 +61,7 @@ const Footer = () => {
                 className={styles["custom-a"]}
                 href="/transport-management-system"
               >
-                Transportation Management System
+                TMS
               </a>
             </li>
             <li className={styles["custom-li"]}>
