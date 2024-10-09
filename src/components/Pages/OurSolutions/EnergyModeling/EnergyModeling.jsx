@@ -16,7 +16,7 @@ import ArrowDropUpIcon from "../../../../assets/icons/ArrowDropUpIcon";
 import { LanguageContext } from "../../../../contexts/LanguageContexts";
 
 const EnergyModeling = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
   const { language } = useContext(LanguageContext);
 

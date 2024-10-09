@@ -16,7 +16,7 @@ import ArrowDropdownIcon from "../../../../assets/icons/ArrowDropdownIcon";
 import { LanguageContext } from "../../../../contexts/LanguageContexts";
 
 const TransportationManagementSystem = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0); 
   const navigate = useNavigate();
   const { language } = useContext(LanguageContext);
 

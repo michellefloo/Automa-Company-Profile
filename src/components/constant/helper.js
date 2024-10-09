@@ -749,3 +749,105 @@ export const updatesWWECard = {
   },
 };
 
+export const faqTexts = {
+  EN: {
+    headerTitle: "FAQ",
+    headerSubtitle: "Frequenty Asked Question",
+    headlineText: "FAQ",
+    businessHeadline: "FAQ",
+    businessHeadline: "FAQ",
+    businessTitle: "Business",
+    technicalTitle: "Technical",
+    businessTabText: "Business FAQ",
+    technicalTabText: "Technical FAQ",
+  },
+  ID: {
+    headerTitle: "FAQ",
+    headerSubtitle: "Pertanyaan yang Sering Ditanyakan",
+    headlineText: "FAQ",
+    businessTitle: "Business",
+    technicalTitle: "Technical",
+    businessTabText: "Business FAQ",
+    technicalTabText: "Technical FAQ",
+  },
+};
+
+export const businessFAQDropdownData = {
+  EN: [
+    {
+      title: "Does solutions available as subscription?",
+      content: "Yes, for every solution has its own subscription type",
+    },
+    {
+      title: "Any other offer beside subscription model?",
+      content:
+        "For now, only Track X solution has another model to offer beside fix subscription model that is pay per use and by 3PL cooperation",
+    },
+    {
+      title: "Is it possible to acquire solutions as a perpetual?",
+      content: "We yet not have an official perpetual solution offer",
+    },
+  ],
+  ID: [
+    {
+      title: "Apakah solusi tersedia dalam bentuk langganan?",
+      content: "Ya, setiap solusi memiliki jenis langganan masing-masing",
+    },
+    {
+      title: "Apakah ada penawaran lain selain model langganan?",
+      content:
+        "Saat ini, hanya solusi Track X yang memiliki model lain selain langganan tetap, yaitu bayar sesuai penggunaan dan melalui kerjasama dengan 3PL",
+    },
+    {
+      title: "Apakah mungkin untuk mendapatkan solusi secara permanen?",
+      content: "Kami belum memiliki penawaran solusi permanen yang resmi",
+    },
+  ],
+};
+
+export const technicalFAQDropdownData = {
+  EN: [
+    {
+      title: "What kind of network protocols supported?",
+      content:
+        "Our solutions supports GSM, LTE, WiFi, LoRa, and BLE (Bluetooth Low Energy).",
+    },
+    {
+      title: "Does solution include edge computing?",
+      content:
+        "Yes, some of our device are capable of doing edge computing. If it needs a more complex edge computing we are willing to extend the solution.",
+    },
+    {
+      title: "Can user store the data on premise?",
+      content:
+        "For some type of deal we could negotiate to bring the solution up and run on premise.",
+    },
+    {
+      title: "How long does battery on the solutions device last?",
+      content:
+        "It depends on several factors, including how often you want to send the data, the network condition in your area, and what data it tries to capture.",
+    },
+  ],
+  ID: [
+    {
+      title: "Protokol jaringan apa saja yang didukung?",
+      content:
+        "Solusi kami mendukung GSM, LTE, WiFi, LoRa, dan BLE (Bluetooth Low Energy).",
+    },
+    {
+      title: "Apakah solusi ini mendukung edge computing?",
+      content:
+        "Ya, beberapa perangkat kami mampu melakukan edge computing. Jika diperlukan edge computing yang lebih kompleks, kami bersedia memperluas solusinya.",
+    },
+    {
+      title: "Apakah pengguna bisa menyimpan data di lokasi (on-premise)?",
+      content:
+        "Untuk beberapa jenis kesepakatan, kami bisa bernegosiasi untuk menjalankan solusi secara on-premise.",
+    },
+    {
+      title: "Berapa lama daya tahan baterai pada perangkat solusi ini?",
+      content:
+        "Itu tergantung pada beberapa faktor, termasuk seberapa sering Anda ingin mengirim data, kondisi jaringan di area Anda, dan data apa yang coba ditangkap.",
+    },
+  ],
+};

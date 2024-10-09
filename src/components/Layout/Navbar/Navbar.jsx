@@ -12,7 +12,7 @@ import {
   Collapse,
   NavbarToggler,
 } from "reactstrap";
-import { NavLink as RouterNavLink } from "react-router-dom";
+import { NavLink as RouterNavLink, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import logo from "../../../assets/img/logo.png";
 import USFlag from "../../../assets/img/USFlag.png";
@@ -20,13 +20,20 @@ import IDFlag from "../../../assets/img/IDFlag.png";
 import { LanguageContext } from "../../../contexts/LanguageContexts";
 import { navbarTexts } from "../../constant/helper";
 
-
 const NavbarCompanyProfile = () => {
-  const { language, switchLanguage } = useContext(LanguageContext); 
+  const { language, switchLanguage } = useContext(LanguageContext);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const handleButtonMemberAreaClick = () => {
+    navigate("/contact-us");
+  };
+
+  const handleButtonGetDemoClick = () => {
+    navigate("/contact-us");
+  };
 
   return (
     <Navbar color="dark" dark expand="md" className={styles["navbar-custom"]}>
@@ -184,6 +191,7 @@ const NavbarCompanyProfile = () => {
               <Button
                 color="primary"
                 className={`${styles["member-area-button"]}`}
+                onClick={handleButtonMemberAreaClick}
               >
                 {navbarTexts[language].memberArea}
               </Button>
@@ -192,6 +200,7 @@ const NavbarCompanyProfile = () => {
               <Button
                 color="secondary"
                 className={`${styles["get-demo-button"]}`}
+                onClick={handleButtonGetDemoClick}
                 outline
               >
                 {navbarTexts[language].getDemo}
