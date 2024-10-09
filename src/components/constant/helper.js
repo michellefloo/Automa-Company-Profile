@@ -48,6 +48,12 @@ import auditImage from "../../assets/img/EnergyModeling/audit-image.png";
 import visionImage from "../../assets/img/AboutUs/vision-image.png";
 import missionImage from "../../assets/img/AboutUs/mission-image.png";
 
+// Updates
+import updateCardTMS from "../../assets/img/Updates/updates-card-tms-image.png";
+import updateCardStocker from "../../assets/img/Updates/updates-card-stocker-image.png";
+import updateCardEnermo from "../../assets/img/Updates/updates-card-enermo-image.png";
+import updateCardPointHub from "../../assets/img/Updates/updates-card-pointhub-image.png";
+
 export const footerTexts = {
   EN: {
     followUs: "Follow Us",
@@ -677,3 +683,69 @@ export const missionCard = {
     imgSrc: missionImage,
   },
 };
+
+export const updatesTexts = {
+  EN: {
+    headerTitle: "Automated Supply Chains Carbon Tracking Ecosystem",
+    headerSubtitle:
+      "Strive to achieve a steady economic growth while minimizing the adverse effects on the environment.",
+    oemmText: "One Ecosystem,",
+    oemmSubText: "Multi Module",
+    headlineText: "Automa IOT Platform",
+    oemmFirstText: "Automated",
+    oemmSecondText: "Your Business",
+    oemmThirdText: ",",
+    oemmFourthText: "Create",
+    oemmFifthText: "your Impact",
+    sceFirstText: "We exist to make",
+    sceSecondText: "Sustainable Supply Chain",
+    sceThirdText: "possible on emerging countries",
+  },
+  ID: {
+    headerTitle: "Ekosistem Pelacakan Karbon Rantai Pasokan Otomatis",
+    headerSubtitle:
+      "Berusaha untuk mencapai pertumbuhan ekonomi yang stabil sambil meminimalkan dampak negatif terhadap lingkungan.",
+    oemmText: "Satu Ekosistem,",
+    oemmSubText: "Multi Modul",
+    headlineText: "Automa IOT Platform",
+    oemmFirstText: "Otomatisasi",
+    oemmSecondText: "Bisnis Anda",
+    oemmThirdText: ",",
+    oemmFourthText: "Ciptakan",
+    oemmFifthText: "Dampak Anda",
+    sceFirstText: "Kami hadir untuk membuat",
+    sceSecondText: "Rantai Pasokan Berkelanjutan",
+    sceThirdText: "terwujud di negara berkembang",
+  },
+};
+
+export const updatesCardData = {
+  EN: [
+    { title: "TMS", imgSrc: updateCardTMS },
+    { title: "Stocker", imgSrc: updateCardStocker },
+    { title: "Energy Modeling", imgSrc: updateCardEnermo },
+    { title: "Point Hub", imgSrc: updateCardPointHub },
+  ],
+  ID: [
+    { title: "TMS", imgSrc: updateCardTMS },
+    { title: "Stocker", imgSrc: updateCardStocker },
+    { title: "Pemodelan Energi", imgSrc: updateCardEnermo },
+    { title: "Point Hub", imgSrc: updateCardPointHub },
+  ],
+};
+
+export const updatesWWECard = {
+  EN: {
+    descriptionOne:
+      "We want to help MNC and verticals track, calculate and trace Carbon Footprint together with their vendors and local group using mainly visibility / primary data.",
+    descriptionTwo:
+      "By helping manufacturer, transporter, and retailer achieving economy and environment sustainability through (1) digitalization, (2) hassle-free carbon emission tracking, and (3) data monetization, using supply chain activity analytics and Internet of Things (IoT).",
+  },
+  ID: {
+    descriptionOne:
+      "Kami ingin membantu perusahaan multinasional dan sektor vertikal melacak, menghitung, dan menelusuri Jejak Karbon bersama dengan vendor dan kelompok lokal mereka, terutama menggunakan visibilitas / data primer.",
+    descriptionTwo:
+      "Dengan membantu produsen, transporter, dan pengecer mencapai keberlanjutan ekonomi dan lingkungan melalui (1) digitalisasi, (2) pelacakan emisi karbon tanpa kerumitan, dan (3) monetisasi data, menggunakan analitik aktivitas rantai pasokan dan Internet of Things (IoT).",
+  },
+};
+

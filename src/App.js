@@ -10,6 +10,7 @@ const loading = (
   </div>
 );
 
+// Navbar
 const Navbar = React.lazy(() => import("./components/Layout/Navbar/Navbar"));
 
 // Main Content
@@ -26,7 +27,9 @@ const EnergyModeling = React.lazy(() =>
   import("./components/Pages/OurSolutions/EnergyModeling/EnergyModeling")
 );
 const AboutUs = React.lazy(() => import("./components/Pages/About/AboutUs"));
+const Updates = React.lazy(() => import("./components/Pages/Updates/Updates"));
 
+// Footer
 const Footer = React.lazy(() => import("./components/Layout/Footer/Footer"));
 
 function App() {
@@ -47,7 +50,7 @@ function App() {
                 <Route path="/carbon-tracking" element={<CarbonTracking />} />
                 <Route path="/energy-modeling" element={<EnergyModeling />} />
                 <Route path="/about-us" element={<AboutUs />} />
-                <Route path="/updates" element={<div>Updates Page</div>} />
+                <Route path="/updates" element={<Updates />} />
                 <Route path="/faq" element={<div>FAQ Page</div>} />
                 <Route
                   path="/contact-us"

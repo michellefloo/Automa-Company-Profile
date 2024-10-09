@@ -213,7 +213,7 @@ const HomePage = () => {
       <div className={styles["solution-section"]}>
         <div className={styles["card-container"]}>
           {homePagecardData[language].map((card, index) => (
-            <Card className={styles["customCard"]} key={index}>
+            <Card className={styles["custom-card"]} key={index}>
               <CardImg top width="100%" src={card.imgSrc} alt={card.title} />
               <CardBody className={styles["card-body"]}>
                 <CardTitle className={styles["card-title"]}>

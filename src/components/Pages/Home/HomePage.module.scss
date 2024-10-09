@@ -230,7 +230,7 @@
     width: 100%;
     justify-content: space-between;
 
-    .customCard {
+    .custom-card {
       background-color: #1c406c;
       border-radius: 8px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -351,36 +351,15 @@
       gap: 40px;
       align-items: center;
 
-      .customCard {
-        border-radius: 8px;
-        transition: transform 0.3s;
+      .custom-card {
         width: 100%;
         border: 0;
 
-        &:hover {
-          transform: scale(1.05);
-        }
-
-        img {
-          height: 250px;
-          object-fit: cover;
-          border-radius: 8px 8px 0 0;
-        }
-
-        .card-body {
-          background-color: #1c406c;
-          border-radius: 0 0 8px 8px;
-        }
-
         .card-title {
           &::before {
-            content: "";
-            position: absolute;
-            top: -20px; // Adjusted so that the line appears closer to the title
-            left: 50%;
-            transform: translateX(-50%);
-            width: 105%; // Width of the line
-            height: 5px; // Height of the line to match the image's thickness
+            top: -20px; 
+            width: 105%;
+            height: 5px; 
           }
         }
       }
@@ -479,21 +458,9 @@
       gap: 16px;
       align-items: center;
 
-      .customCard {
-        border-radius: 8px;
-        transition: transform 0.3s;
+      .custom-card {
         width: 100%;
         border: 0;
-
-        &:hover {
-          transform: scale(1.05);
-        }
-
-        img {
-          height: 250px;
-          object-fit: cover;
-          border-radius: 8px 8px 0 0;
-        }
 
         .card-body {
           background-color: #1c406c;
@@ -502,13 +469,9 @@
 
         .card-title {
           &::before {
-            content: "";
-            position: absolute;
-            top: -20px; // Adjusted so that the line appears closer to the title
-            left: 50%;
-            transform: translateX(-50%);
-            width: 110%; // Width of the line
-            height: 5px; // Height of the line to match the image's thickness
+            top: -20px; 
+            width: 110%;
+            height: 5px;
           }
         }
       }
