@@ -50,7 +50,9 @@ const AboutUs = () => {
               <div className={styles["blue-card"]}></div>
               <div className={styles["white-card"]}>
                 <div className={styles["wwe-card-content"]}>
-                  <h3 className={styles["wwe-card-title"]}>{wweCard[language].title}</h3>
+                  <h3 className={styles["wwe-card-title"]}>
+                    {wweCard[language].title}
+                  </h3>
                   <p className={styles["wwe-card-description"]}>
                     <span>{wweCard[language].descriptionOne}</span>
                     <span>{wweCard[language].descriptionTwo}</span>
@@ -68,7 +70,7 @@ const AboutUs = () => {
         <h1 className={styles["vision-mission-title"]}>
           <span className={styles["line"]}></span>
           <span className={styles["no-highlighted"]}>
-            {aboutUsTexts[language].visionText}
+            {aboutUsTexts[language].visionText}&nbsp;
           </span>
           <span className={styles["highlighted"]}>
             {aboutUsTexts[language].missionText}

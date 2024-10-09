@@ -754,8 +754,6 @@ export const faqTexts = {
     headerTitle: "FAQ",
     headerSubtitle: "Frequenty Asked Question",
     headlineText: "FAQ",
-    businessHeadline: "FAQ",
-    businessHeadline: "FAQ",
     businessTitle: "Business",
     technicalTitle: "Technical",
     businessTabText: "Business FAQ",
@@ -848,6 +846,70 @@ export const technicalFAQDropdownData = {
       title: "Berapa lama daya tahan baterai pada perangkat solusi ini?",
       content:
         "Itu tergantung pada beberapa faktor, termasuk seberapa sering Anda ingin mengirim data, kondisi jaringan di area Anda, dan data apa yang coba ditangkap.",
+    },
+  ],
+};
+
+export const contactUsTexts = {
+  EN: {
+    headerTitle: "Contact Us",
+    headerSubtitle:
+      "We're here to help! Whether you have a question, need assistance, or just want to give feedback, don't hesitate to reach out. Our team is available and ready to assist you with anything you need.",
+    contentTitleMainText: "Contact",
+    contentTitleSubText: "Info",
+    contentSubtitle:
+      "Reach out to us through any of the following methods, and we’ll get back to you promptly",
+  },
+  ID: {
+    headerTitle: "Hubungi Kami",
+    headerSubtitle:
+      "Kami di sini untuk membantu! Baik Anda memiliki pertanyaan, membutuhkan bantuan, atau hanya ingin memberikan masukan, jangan ragu untuk menghubungi kami. Tim kami siap membantu Anda dengan apa pun yang Anda butuhkan.",
+    contentTitleMainText: "Kontak",
+    contentTitleSubText: "Info",
+    contentSubtitle:
+      "Hubungi kami melalui salah satu metode berikut, dan kami akan segera menanggapi Anda.",
+  },
+};
+
+export const cardContactInfoData = {
+  EN: [
+    {
+      id: 1,
+      title: "Phone Number",
+      description: "+62 811-2759-427",
+      icons: "phone",
+    },
+    {
+      id: 2,
+      title: "Mail Address",
+      description: "contact@automa.id",
+      icons: "email",
+    },
+    {
+      id: 3,
+      title: "Instagram",
+      description: "@automa_chain",
+      icons: "ig",
+    },
+  ],
+  ID: [
+    {
+      id: 1,
+      title: "Nomor Telepon",
+      description: "+62 811-2759-427",
+      icons: "phone",
+    },
+    {
+      id: 2,
+      title: "Email",
+      description: "contact@automa.id",
+      icons: "email",
+    },
+    {
+      id: 3,
+      title: "Instagram",
+      description: "@automa_chain",
+      icons: "ig",
     },
   ],
 };

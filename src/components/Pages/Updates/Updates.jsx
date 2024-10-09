@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../../contexts/LanguageContexts";
 import styles from "./Updates.module.scss";
 import {
-    homePagecardData,
+  homePagecardData,
   updatesCardData,
   updatesTexts,
   updatesWWECard,
@@ -28,7 +28,7 @@ const Updates = () => {
         <h1 className={styles["one-ecosystem-multi-module-title"]}>
           <span className={styles["line"]}></span>
           <span className={styles["no-highlighted"]}>
-            {updatesTexts[language].oemmText}
+            {updatesTexts[language].oemmText}&nbsp;
           </span>
           <span className={styles["highlighted"]}>
             {updatesTexts[language].oemmSubText}

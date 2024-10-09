@@ -65,7 +65,7 @@ const TransportationManagementSystem = () => {
           <h1 className={styles["feature-title"]}>
             <span className={styles["line"]}></span>
             <span className={styles["no-highlighted"]}>
-              {trackTexts[language].mainText}
+              {trackTexts[language].mainText}&nbsp;
             </span>
             <span className={styles["highlighted"]}>
               {trackTexts[language].subText}

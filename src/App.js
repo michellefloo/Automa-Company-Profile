@@ -29,6 +29,9 @@ const EnergyModeling = React.lazy(() =>
 const AboutUs = React.lazy(() => import("./components/Pages/About/AboutUs"));
 const Updates = React.lazy(() => import("./components/Pages/Updates/Updates"));
 const FAQ = React.lazy(() => import("./components/Pages/FAQ/FAQ"));
+const ContactUs = React.lazy(() =>
+  import("./components/Pages/ContactUs/ContactUs")
+);
 
 // Footer
 const Footer = React.lazy(() => import("./components/Layout/Footer/Footer"));
@@ -53,10 +56,7 @@ function App() {
                 <Route path="/about-us" element={<AboutUs />} />
                 <Route path="/updates" element={<Updates />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route
-                  path="/contact-us"
-                  element={<div>Contact Us Page</div>}
-                />
+                <Route path="/contact-us" element={<ContactUs />} />
               </Routes>
             </main>
             <Footer />

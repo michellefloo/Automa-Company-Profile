@@ -65,7 +65,7 @@ const EnergyModeling = () => {
           <h1 className={styles["feature-title"]}>
             <span className={styles["line"]}></span>
             <span className={styles["no-highlighted"]}>
-              {enermoTexts[language].mainText}
+              {enermoTexts[language].mainText}&nbsp;
             </span>
             <span className={styles["highlighted"]}>
               {enermoTexts[language].subText}

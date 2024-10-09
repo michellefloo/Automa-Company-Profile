@@ -53,7 +53,7 @@ const CarbonTracking = () => {
         <h1 className={styles["modules-title"]}>
           <span className={styles["line"]}></span>
           <span className={styles["no-highlighted"]}>
-            {carbonTrackingTexts[language].mainText}
+            {carbonTrackingTexts[language].mainText}&nbsp;
           </span>
           <span className={styles["highlighted"]}>
             {carbonTrackingTexts[language].subText}
