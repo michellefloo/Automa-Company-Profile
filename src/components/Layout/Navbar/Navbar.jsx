@@ -19,6 +19,7 @@ import USFlag from "../../../assets/img/USFlag.png";
 import IDFlag from "../../../assets/img/IDFlag.png";
 import { LanguageContext } from "../../../contexts/LanguageContexts";
 import { navbarTexts } from "../../constant/helper";
+import { FaBars, FaTimes } from "react-icons/fa"; // Import icons
 
 const NavbarCompanyProfile = () => {
   const { language, switchLanguage } = useContext(LanguageContext);
@@ -47,7 +48,10 @@ const NavbarCompanyProfile = () => {
         <NavbarToggler
           onClick={toggle}
           className={styles["navbar-toggler-right"]}
-        />
+        >
+          {/* Conditionally render bars or times icon based on isOpen state */}
+          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </NavbarToggler>
 
         {/* Collapse menu */}
         <Collapse

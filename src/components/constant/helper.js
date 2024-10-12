@@ -160,6 +160,7 @@ export const homePageTexts = {
     },
     clickHereButton: "Click Here",
   },
+
   ID: {
     headerTitle: "Sistem Manajemen Transportasi",
     headerSubtitle:
@@ -170,28 +171,28 @@ export const homePageTexts = {
     location: {
       title: "Lokasi Waktu Nyata",
       description:
-        "Perkembangan armada Anda terbuka untuk Anda secara transparan 24/7. Setiap perubahan di jalan akan dicatat inci demi inci.",
+        "Perkembangan armada terbuka untuk Anda secara transparan 24/7. Setiap perubahan di jalan akan dilacak satu demi satu.",
     },
     operational: {
       title: "KPI Operasional",
       description:
-        "Menerapkan dasbor berbasis SCOR, memberikan referensi KPI untuk membantu Anda mengoperasikan operasi rantai pasokan yang efektif dan efisien.",
+        "Penerapan dashboard berbasis SCOR, serta adanya referensi KPI untuk membantu Anda mengoperasikan rantai pasokan yang efektif dan efisien.",
     },
     fuel: {
       title: "Konsumsi Bahan Bakar",
       description:
-        "Dukung riwayat pengisian bahan bakar, peringatan pengisian, peringatan pencurian, dan geotagging. Anda bisa memverifikasi tagihan bahan bakar armada jika diperlukan.",
+        "Mendukung riwayat pengisian bahan bakar, peringatan pengisian, pencurian, dan geotagging. Anda bisa memverifikasi tagihan bahan bakar armada jika diperlukan.",
     },
     proof: {
       title: "Bukti Pengiriman",
       description:
-        "Kelola waypoint pengiriman Anda dengan ETA yang tepat dan optimasi waypoint. Audit setiap perjalanan pengiriman dan simpan bukti pengirimannya.",
+        "Kelola titik pengiriman dengan ETA yang akurat dan optimasi rute. Audit setiap perjalanan dan simpan bukti pengiriman.",
     },
     clickHereButton: "Klik Di Sini",
   },
 };
 
-export const homePagecardData = {
+export const homePageCardData = {
   EN: [
     { title: "Distribution Solution", imgSrc: distributionSolution },
     { title: "3rd Party Logistic", imgSrc: thirdPartyLogistic },
@@ -307,19 +308,19 @@ export const cardTrackData = {
     {
       title: "KPI Operasional",
       subtitle:
-        "Menerapkan dasbor berbasis SCOR, memberikan referensi KPI untuk membantu Anda menjalankan operasi rantai pasokan yang efektif dan efisien.",
+        "Penerapan dasbor berbasis SCOR, serta adanya referensi KPI untuk membantu Anda menjalankan operasi rantai pasokan yang efektif dan efisien.",
       imgSrc: cardTrackImageTwo,
     },
     {
       title: "Konsumsi Bahan Bakar",
       subtitle:
-        "Mendukung riwayat pengisian bahan bakar, peringatan pengisian, peringatan pencurian, dan geotagging. Anda bisa memverifikasi tagihan bahan bakar armada jika diperlukan.",
+        "Mendukung riwayat pengisian bahan bakar, peringatan pengisian, pencurian, dan geotagging. Anda bisa memverifikasi tagihan bahan bakar armada jika diperlukan.",
       imgSrc: cardTrackImageThree,
     },
     {
       title: "Bukti Pengiriman",
       subtitle:
-        "Kelola titik-titik pengiriman Anda dengan ETA yang tepat dan optimasi titik-titik pengiriman. Audit setiap perjalanan pengiriman dan simpan bukti pengiriman.",
+        "Kelola titik pengiriman dengan ETA yang akurat dan optimasi rute. Audit setiap perjalanan dan simpan bukti pengiriman.",
       imgSrc: cardTrackImageFour,
     },
   ],
@@ -414,7 +415,7 @@ export const cardCarbonTrackingData = {
       id: 1,
       title: "Visibilitas",
       description:
-        "Lacak menggunakan platform kami dan operasikan rantai pasokan Anda secara kolaboratif dengan vendor Anda.",
+        "Pantau menggunakan platform kami dan operasikan rantai pasokan Anda secara kolaboratif bersama vendor Anda.",
       icon: visibilityIcon,
       image: visibilityImage,
     },
@@ -422,7 +423,7 @@ export const cardCarbonTrackingData = {
       id: 2,
       title: "Integritas",
       description:
-        "Laporkan aktivitas menggunakan faktur emisi otomatis dan dasbor karbon. Verifikasi laporan vendor Anda atau laporan Anda sendiri menggunakan Verifikasi On Demand dari para profesional terkurasi.",
+        "Laporkan aktivitas dengan faktur emisi otomatis dan dasbor karbon. Verifikasi laporan vendor atau laporan Anda sendiri menggunakan Verifikasi On Demand dari profesional terpercaya.",
       icon: integrityIcon,
       image: integrityImage,
     },
@@ -480,7 +481,7 @@ export const cardCarbonTrackingModulesData = {
       id: 1,
       title: "TMS",
       description:
-        "Rencanakan, operasikan, dan evaluasi jarak tempuh Anda bersama kami. Tingkatkan kepuasan pelanggan dan kurangi penipuan dengan ETA yang tepat dan pemenuhan pesanan yang sempurna.",
+        "Rencanakan, operasikan, dan evaluasi jarak tempuh Anda bersama kami. Tingkatkan kepuasan pelanggan dan kurangi penipuan dengan estimasi waktu kedatangan (ETA) yang akurat serta pemenuhan pesanan yang sempurna.",
       icon: tmsIcon,
       width: 30,
       height: 40,
@@ -489,7 +490,7 @@ export const cardCarbonTrackingModulesData = {
       id: 2,
       title: "Pemodelan Energi",
       description:
-        "Lakukan pemodelan energi, pengukuran, dan audit. Dapatkan wawasan tentang bagaimana Anda dapat mengonsumsi lebih sedikit!",
+        "Lakukan pemodelan energi, pengukuran, dan audit. Dapatkan wawasan tentang cara mengurangi konsumsi energi Anda!",
       icon: energyModelingIcon,
       width: 30,
       height: 40,
@@ -498,7 +499,7 @@ export const cardCarbonTrackingModulesData = {
       id: 3,
       title: "Stocker",
       description:
-        "Bertindak sebagai aplikasi gudang sederhana, modul ini dapat melakukan pencatatan stok dan sinkronisasi proses pemesanan.",
+        "Modul ini berfungsi sebagai aplikasi gudang sederhana yang memungkinkan Anda untuk mencatat stok dan menyinkronkan proses pemesanan dengan mudah.",
       icon: stockerIcon,
       width: 30,
       height: 30,
@@ -507,7 +508,7 @@ export const cardCarbonTrackingModulesData = {
       id: 4,
       title: "Point Hub",
       description:
-        "Simpan data geolokasi pelanggan Anda dan gunakan verifikasi KYB kami untuk memeriksa mereka!",
+        "Simpan data geolokasi pelanggan Anda dan manfaatkan verifikasi KYB kami untuk memastikan keakuratan informasi mereka!",
       icon: pointHubIcon,
       width: 30,
       height: 40,

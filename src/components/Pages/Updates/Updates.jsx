@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../../contexts/LanguageContexts";
 import styles from "./Updates.module.scss";
 import {
-  homePagecardData,
+  homePageCardData,
   updatesCardData,
   updatesTexts,
   updatesWWECard,
@@ -105,7 +105,7 @@ const Updates = () => {
           </span>
         </h1>
         <div className={styles["card-container"]}>
-          {homePagecardData[language].map((card, index) => (
+          {homePageCardData[language].map((card, index) => (
             <Card className={styles["custom-card"]} key={index}>
               <CardImg top width="100%" src={card.imgSrc} alt={card.title} />
               <CardBody className={styles["card-body"]}>

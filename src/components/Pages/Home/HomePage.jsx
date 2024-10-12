@@ -17,7 +17,7 @@ import ArrowLeftIcon from "../../../assets/icons/ArrowLeftIcon";
 import ArrowRightIcon from "../../../assets/icons/ArrowRightIcon";
 import {
   carouselData,
-  homePagecardData,
+  homePageCardData,
   homePageTexts,
   routeMapping,
 } from "../../constant/helper";
@@ -78,7 +78,9 @@ const HomePage = () => {
       </div>
 
       <div className={styles["what-do-we-track-section"]}>
-        <h1 className={styles["title"]}>What do we track?</h1>
+        <h1 className={styles["title"]}>
+          {homePageTexts[language].trackTitle}
+        </h1>
         <div className={styles["card-container"]}>
           <Card
             style={{
@@ -212,7 +214,7 @@ const HomePage = () => {
 
       <div className={styles["solution-section"]}>
         <div className={styles["card-container"]}>
-          {homePagecardData[language].map((card, index) => (
+          {homePageCardData[language].map((card, index) => (
             <Card className={styles["custom-card"]} key={index}>
               <CardImg top width="100%" src={card.imgSrc} alt={card.title} />
               <CardBody className={styles["card-body"]}>
