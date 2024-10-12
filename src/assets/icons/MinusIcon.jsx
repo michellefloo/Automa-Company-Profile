@@ -16,14 +16,14 @@ const MinusIcon = ({ width, height, color }) => {
         height="22"
         rx="11"
         stroke={color}
-        stroke-width="2"
+        strokeWidth="2"
       />
       <path
         d="M7.625 12H16.375"
         stroke={color}
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

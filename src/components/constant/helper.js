@@ -375,7 +375,7 @@ export const carbonTrackingTexts = {
     subText: "Modules",
   },
   ID: {
-    headerTitle: "Platform Kolaborasi Vertikal Rantai Pasokan",
+    headerTitle: "Platform Kolaborasi Terpadu untuk Rantai Pasokan",
     headerSubtitle:
       "Kami ingin membantu perusahaan multinasional dan sektor-sektor terkait untuk melacak, menghitung, dan menelusuri jejak karbon bersama dengan vendor dan kelompok lokal mereka, dengan memanfaatkan data utama atau visibilitas.",
     hwdiTitle: "Bagaimana Kami Melakukannya?",
@@ -703,7 +703,7 @@ export const updatesTexts = {
     sceThirdText: "possible on emerging countries",
   },
   ID: {
-    headerTitle: "Ekosistem Pelacakan Karbon Rantai Pasokan Otomatis",
+    headerTitle: "Sistem Otomatis untuk Pelacakan Karbon di Rantai Pasokan",
     headerSubtitle:
       "Berusaha untuk mencapai pertumbuhan ekonomi yang stabil sambil meminimalkan dampak negatif terhadap lingkungan.",
     oemmText: "Satu Ekosistem,",
@@ -714,8 +714,8 @@ export const updatesTexts = {
     oemmThirdText: ",",
     oemmFourthText: "Ciptakan",
     oemmFifthText: "Dampak Anda",
-    sceFirstText: "Kami hadir untuk membuat",
-    sceSecondText: "Rantai Pasokan Berkelanjutan",
+    sceFirstText: "Kami hadir untuk mewujudkan",
+    sceSecondText: "Rantai Pasokan yang Berkelanjutan",
     sceThirdText: "terwujud di negara berkembang",
   },
 };
@@ -896,7 +896,7 @@ export const cardContactInfoData = {
   ID: [
     {
       id: 1,
-      title: "Nomor Telepon",
+      title: "Telepon",
       description: "+62 811-2759-427",
       icons: "phone",
     },
